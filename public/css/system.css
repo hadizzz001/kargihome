@@ -1,0 +1,596 @@
+﻿/*
+* System Styles
+Author: Bright Logic
+*/
+ #banner-container {
+    width: 100%;
+    height: 120px;
+    position: relative;
+}
+            
+#banner-title {
+    position: relative;
+    color: white;
+    font-size: 32px;
+    left: 0px;
+    top: 45px;
+}
+
+/* Footer Text */
+#footertext {
+    min-height: 60px;
+    color: #4D4F52;
+    background: #aaaaaa;
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/*  #Property Bullets */
+.property-features > li i.fa {
+    top: 9px;
+}
+
+.property-features > li i {
+    font-size: 20pt
+}
+
+.property-features > li {
+    position: relative;
+    padding: 10px 10px 10px 60px;
+    min-height: 30px;
+    border: 1px solid #e3e3e3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+/* Form Error Summary Text*/
+#FormErrorSummaryText {
+    padding: 20px 0px 0px 0px;
+    color: red;
+    font-size: 14px;
+}
+
+
+/* Captcha Text*/
+#CaptchaText {
+    font-size: 10px;
+}
+
+/* Property Slider 2nd Instance */
+#new-properties-slider2 .item {
+    width: 270px;
+}
+
+/* Remove bottom padding from Property Slider */
+#property-detail-thumbs {
+  margin-bottom: 10px;
+}
+
+/* Owl Slider to move next / prev button locations */
+.owl-controls .owl-buttons .owl-prev {
+
+                left: 10px;
+
+}
+.owl-controls .owl-buttons .owl-next {
+
+                right: 10px;
+
+}
+.owl-controls .owl-buttons {
+                height: 0;
+                width: 0;
+                position: static;
+}
+.owl-controls .owl-buttons:before {
+  content: "";
+  border: 0;
+}
+.owl-carousel .owl-controls .owl-buttons div {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    display: inline-block; 
+    zoom: 1;
+    margin: 0;
+    width: 40px;
+                padding:0;
+    height: 40px;
+                color: #555555;
+                font-size: 18pt;
+                line-height: 40px;
+    text-align: center;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+
+}
+.owl-controls .owl-buttons div.owl-prev:hover,
+.owl-controls .owl-buttons div.owl-next:hover {
+  background: #555555;
+  color: #ffffff;
+}
+
+/* Top Bar */
+#topbar a:hover {
+	color: #ed0c6e;
+	text-decoration:none;
+}
+
+/* multibranch-selector */
+.multibranch-selector {
+  display: inline-block;
+  position: relative;
+}
+.multibranch-selector span {
+  padding-right: 12px;
+  padding-left: 2px;
+  position: relative;
+  color: #ffffff;
+}
+
+.multibranch-selector ul {
+  position: absolute;
+  left: 0px;
+  top: 26px;
+  padding: 0 6px;
+  margin: 0;
+  z-index: 999;
+  text-align: left;
+  background-color: #444;
+  color: #ffffff;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease-out;
+  -moz-transition: max-height 0.3s ease-out;
+  -ms-transition: max-height 0.3s ease-out;
+  -o-transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-out;
+}
+.multibranch-selector ul li {
+  margin: 0px !important;
+  display: block !important;
+}
+.multibranch-selector ul li a {
+  line-height: 33px;
+  display: inline-block;
+  width: 220px;
+}
+
+.multibranch-selector:hover ul {
+  max-height: 250px;
+}
+
+/* # Property Status Box / Panel */
+.status-available{
+	background: url("https://www.aubreylee.com/css/Statusgreen.png");
+}
+.status-underoffer {
+	background: url("https://www.aubreylee.com/css/Statusorange.png");
+}
+.status-exclusive {
+	background: url("https://www.aubreylee.com/css/Statuspurple.png");
+}
+.status-sold {
+	background: url("https://www.aubreylee.com/css/Statusred.png");
+}
+.status-newinstruction {
+	background: url("https://www.aubreylee.com/css/Statuspurple.png");
+}
+.status-let {
+	background: url("https://www.aubreylee.com/css/Statusred.png");
+}
+.status-notavailable {
+	background: url("https://www.aubreylee.com/css/Statusred.png");
+}
+
+/* # Property Status Text */
+.status-text-available{
+    font-size: 12pt;
+	color: green;
+}
+.status-text-underoffer {
+    font-size: 12pt;
+	color: orange;
+}
+.status-text-exclusive {
+    font-size: 12pt;
+	color: purple;
+}
+.status-text-sold {
+    font-size: 12pt;
+	color: red;
+}
+.status-text-newinstruction {
+    font-size: 12pt;
+    color: purple;
+}
+.status-text-let {
+    font-size: 12pt;
+	color: red;
+}
+.status-text-notavailable {
+    font-size: 12pt;
+    color: black;	
+}
+
+/* # Property List Grid - set a xonsistent height */
+@media (min-width: 1200px) {
+
+.grid-style1 .item .amenities {
+                position:absolute;
+                bottom: 6px;
+                left: 3%;
+                right: 3%;
+                width: 94%;
+
+}
+.grid-style1 .item {
+                min-height: 580px;
+}
+.grid-style1 .info p {
+                font-size: 14px;
+}
+}
+@media (min-width: 1000px) and (max-width: 1199px){
+
+.grid-style1 .item .amenities {
+                position: absolute;
+                bottom: 6px;
+                left: 3%;
+                right: 3%;
+                width: 94%;
+
+}
+.grid-style1 .item {
+                min-height: 600px;
+}
+.grid-style1 .info p {
+                font-size: 14px;
+}
+}
+
+/* # Property Grid 2 - used on PropertyGrid widget - set a xonsistent height */
+@media (min-width: 1200px) {
+
+    .grid-style2 .item .amenities {
+        /* position: absolute; */
+        bottom: 6px;
+        left: 3%;
+        right: 3%;
+        width: 100%;     
+    }
+
+    .grid-style2 .item {
+        min-height: 370px;
+        border: none !important;
+    }
+
+    .grid-style2 .info p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .grid-style2 .item .amenities {
+        /* position: absolute; */
+        bottom: 6px;
+        left: 3%;
+        right: 3%;
+        width: 100%;
+    }
+
+    .grid-style2 .item {
+        min-height: 370px;
+        border: none !important;
+    }
+
+    .grid-style2 .info p {
+        font-size: 14px;
+    }
+}
+
+/* virtualtourflash */
+#property-detail-wrapper.style1 .virtualtour {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-image: url('../media/VirtualTour.png');
+    background-repeat: no-repeat; 
+    padding: 60px 60px 60px 60px;
+    z-index: 10;
+}
+
+/* Form Controls for Search */
+.form-control-text,
+.form-control-usage,
+.form-control-propertytypegroup,
+.form-control-category,
+.form-control-bedrooms,
+.form-control-price,
+.form-control-areasearch,
+.form-control-qualifications,
+.form-control-status {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+    .form-control-text .chzn-container,
+    .form-control-usage .chzn-container,
+    .form-control-propertytypegroup .chzn-container,
+    .form-control-category .chzn-container,
+    .form-control-bedrooms .chzn-container,
+    .form-control-price .chzn-container,
+    .form-control-areasearch .chzn-container,
+    .form-control-qualifications .chzn-container,
+    .form-control-status .chzn-container,
+    .form-control-text .form-control,
+    .form-control-usage .form-control,
+    .form-control-propertytypegroup .form-control,
+    .form-control-category .form-control,
+    .form-control-bedrooms .form-control,
+    .form-control-price .form-control,
+    .form-control-areasearch .form-control,
+    .form-control-qualifications .form-control,
+    .form-control-status .form-control {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+.form-control-text {
+    width: 280px;
+}
+
+.form-control-propertytypegroup {
+    width: 170px;
+}
+
+.form-control-usage {
+    width: 145px;
+}
+
+.form-control-category {
+    width: 120px;
+}
+
+.form-control-price {
+    width: 145px;
+}
+
+.form-control-bedrooms {
+    width: 95px;
+}
+
+.form-control-areasearch {
+    width: 280px;
+}
+
+.form-control-qualifications {
+    width: 170px;
+}
+
+.form-control-status {
+    width: 150px;
+}
+
+/* Schools data */
+.school-table {
+    width: 100%;
+}
+
+.school-table .center {
+    color: #ffffff;
+    border-top: 1px solid #ffffff;
+}
+
+.school-table .fa {
+    font-size: 24px;
+}
+
+.school-table th {
+    line-height: 20px;
+    font-size: 11px;
+}
+
+.school-table th strong {
+    font-size: 20px;
+}
+
+.school-table th strong em {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.school-table th, .school-table td {
+    /*padding-right: 50px;*/
+    border-top: 1px dotted #e7e7e7;
+    font-size: 14px;
+}
+
+.school-table th p {
+    margin-bottom: 10px;
+}
+
+.school-table th p:last-child {
+    margin-bottom: 0;
+}
+
+.school-table th.center, .school-table td.center {
+    text-align: center;
+}
+
+.school-table tr.additional td {
+    background: #e7e7e7;
+    border-bottom: 1px dotted white;
+}
+
+/*
+.school-table tr td:first-child {
+padding-right: 10px;
+}
+*/
+
+.school-table tr.additional td:last-child {
+    font-weight: bold;
+}
+
+.selectable-row {
+    cursor: pointer;
+}
+
+.selected-row {
+    cursor: default;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.school-table td img {
+    margin-top: 2px;
+    margin-right: 0;
+    max-height: 20px;
+}
+
+.radio-button input[type=radio] {
+    display: none;
+}
+
+.radio-button input[type=radio] + label {
+    display: inline-block;
+    margin: -2px;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+    font-weight: inherit !important;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    background-repeat: repeat-x;
+    border: 1px solid #ccc;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.radio-button input[type=radio]:checked + label {
+    background-image: none;
+    font-weight: inherit !important;
+    outline: 0;
+    background-color: #e0e0e0;
+}
+
+/* # Site Map listings */
+
+.sitemap-listings {
+    list-style: none;
+    padding: 0;
+}
+
+    .sitemap-listings li {
+        min-height: 58px;
+        display: block;
+        margin-bottom: 2px;
+        width: 100%;
+        position: relative;
+        padding: 4px 42px 0 64px;
+    }
+
+        .sitemap-listings li .image {
+            width: 58px;
+            height: 58px;
+            overflow: hidden;
+            position: absolute;
+            display: block;
+            z-index: 2;
+            top: 0;
+            left: 0;
+        }
+
+            .sitemap-listings li .image img {
+                height: 100%;
+            }
+
+        .sitemap-listings li a {
+            line-height: 8px;
+            z-index: 1;
+            display: inline;
+            width: 100%;
+            min-height: 58px;
+            vertical-align: middle;
+        }
+
+            .sitemap-listings li a span {
+                position: absolute;
+                right: 0;
+                top: 10px;
+                margin-right: 5px;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                font-size: 13pt;
+                border: 1px solid #74777c;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+            }
+
+        .sitemap-listings li li:hover > p a {
+            color: #11355f !important;
+        }
+
+            .sitemap-listings li li:hover > p a span {
+                border-color: #11355f;
+            }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .sitemap-listings li {
+        padding: 4px 42px 0 0;
+    }
+
+        .sitemap-listings li .image {
+            display: none;
+        }
+}
+
+.featured-property-image-container {
+    height: 200px;
+}
+
+@media (min-width: 990px) {
+    .property-list-image-container {
+        height: 250px;
+    }
+}
+
+    .property-list-image-container > img, .featured-property-image-container > img {
+        float: left;
+        height: 100%;
+        object-fit: cover;
+    }
+
+#ContentPlaceHolderMain_repTestimonials_imgTestimonialImage_0,
+#ContentPlaceHolderMain_repTestimonials_imgTestimonialImage_1,
+#ContentPlaceHolderMain_repTestimonials_imgTestimonialImage_2,
+#ContentPlaceHolderMain_repTestimonials_imgTestimonialImage_3,
+#ContentPlaceHolderMain_repTestimonials_imgTestimonialImage_4,
+#ContentPlaceHolderMain_repTestimonials_imgTestimonialImage_5,
+#ContentPlaceHolderMain_repTestimonials_imgTestimonialImage_6,
+#ContentPlaceHolderMain_repTestimonials_imgTestimonialImage_7,
+#ContentPlaceHolderMain_repTestimonials_imgTestimonialImage_8,
+#ContentPlaceHolderMain_repTestimonials_imgTestimonialImage_9,
+#ContentPlaceHolderMain_repTestimonials_imgTestimonialImage_10,
+#ContentPlaceHolderMain_repTestimonials_imgTestimonialImage_11 {
+    height: auto;
+    width: 100%;
+    padding: 24px 0;
+}
+
