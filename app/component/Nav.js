@@ -55,8 +55,11 @@ const Navbar = () => {
             <Link href="/about" className="block text-lg font-medium hover:text-gray-200 transition text-white">
               About
             </Link>
-            <Link href="/services" className="block text-lg font-medium hover:text-gray-200 transition text-white">
-              Services
+            <Link href="/listing" className="block text-lg font-medium hover:text-gray-200 transition text-white">
+            Listings
+            </Link>
+            <Link href="/financing" className="block text-lg font-medium hover:text-gray-200 transition text-white">
+            Financing
             </Link>
             <Link href="/contact" className="block text-lg font-medium hover:text-gray-200 transition text-white">
               Contact

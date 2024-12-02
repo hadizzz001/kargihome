@@ -48,21 +48,31 @@ const Navbar = () => {
                     </li>
                     <li className="dropdown">
                       <a
-                        href="/sale"
+                        href="/listing"
                         data-toggle="dropdown"
                         data-hover="dropdown"
                       >
-                        Sales
+                        Listings
 
                       </a>
                     </li>
                     <li className="dropdown">
                       <a
-                        href="/letting"
+                        href="/financing"
                         data-toggle="dropdown"
                         data-hover="dropdown"
                       >
-                        Letting
+                        Financing
+
+                      </a>
+                    </li>
+                    <li className="dropdown">
+                      <a
+                        href="/contact"
+                        data-toggle="dropdown"
+                        data-hover="dropdown"
+                      >
+                        Contact
 
                       </a>
                     </li>

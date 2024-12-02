@@ -4,17 +4,13 @@ import React, { useState } from "react";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
-    title: "",
-    firstName: "",
-    lastName: "",
-    email: "",
-    telephone: "",
-    password: "",
+    fullName: "",
+    mobileNumber: "",
     address: "",
-    category: "Buy",
-    minPrice: "0",
-    maxPrice: "0",
-    bedrooms: "0",
+    citizenship: "",
+    email: "",
+    profession: "",
+    transactionType: "", 
   });
 
   const handleChange = (e) => {
@@ -73,74 +69,24 @@ const RegistrationForm = () => {
         <div className="bg-white p-10 rounded-lg shadow-lg max-w-lg mx-auto">
           <h3 className="text-2xl font-bold mb-6 text-center">Register Now</h3>
           <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Title */}
-            <select
-              name="title"
-              value={formData.title}
-              onChange={handleChange}
-              className="w-full p-3 border rounded-lg"
-            >
-              <option value="">Select Title</option>
-              <option value="Mr">Mr</option>
-              <option value="Mrs">Mrs</option>
-              <option value="Ms">Ms</option>
-              <option value="Miss">Miss</option>
-              <option value="Master">Master</option>
-              <option value="Mx">Mx</option>
-              <option value="Dr">Dr</option>
-            </select>
-
-            {/* First Name */}
+            {/* Full Name */}
             <input
               type="text"
-              name="firstName"
-              value={formData.firstName}
+              name="fullName"
+              value={formData.fullName}
               onChange={handleChange}
-              placeholder="First Name*"
+              placeholder="Full Name*"
               className="w-full p-3 border rounded-lg"
               required
             />
 
-            {/* Last Name */}
-            <input
-              type="text"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              placeholder="Last Name*"
-              className="w-full p-3 border rounded-lg"
-              required
-            />
-
-            {/* Email */}
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Email*"
-              className="w-full p-3 border rounded-lg"
-              required
-            />
-
-            {/* Telephone */}
+            {/* Mobile Number */}
             <input
               type="tel"
-              name="telephone"
-              value={formData.telephone}
+              name="mobileNumber"
+              value={formData.mobileNumber}
               onChange={handleChange}
-              placeholder="Telephone*"
-              className="w-full p-3 border rounded-lg"
-              required
-            />
-
-            {/* Password */}
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="Choose A Password*"
+              placeholder="Mobile Number*"
               className="w-full p-3 border rounded-lg"
               required
             />
@@ -151,49 +97,58 @@ const RegistrationForm = () => {
               name="address"
               value={formData.address}
               onChange={handleChange}
-              placeholder="Address"
+              placeholder="Address*"
               className="w-full p-3 border rounded-lg"
+              required
             />
 
-            {/* Category */}
+            {/* Citizenship */}
             <input
               type="text"
-              name="category"
-              value={formData.category}
+              name="citizenship"
+              value={formData.citizenship}
               onChange={handleChange}
-              placeholder="Category (e.g., Buy or Rent)"
+              placeholder="Citizenship*"
               className="w-full p-3 border rounded-lg"
+              required
             />
 
-            {/* Minimum Price */}
+            {/* Email */}
             <input
-              type="number"
-              name="minPrice"
-              value={formData.minPrice}
+              type="email"
+              name="email"
+              value={formData.email}
               onChange={handleChange}
-              placeholder="Minimum Price"
+              placeholder="Email Address*"
               className="w-full p-3 border rounded-lg"
+              required
             />
 
-            {/* Maximum Price */}
+            {/* Profession */}
             <input
-              type="number"
-              name="maxPrice"
-              value={formData.maxPrice}
+              type="text"
+              name="profession"
+              value={formData.profession}
               onChange={handleChange}
-              placeholder="Maximum Price"
+              placeholder="Profession*"
               className="w-full p-3 border rounded-lg"
+              required
             />
 
-            {/* Bedrooms */}
-            <input
-              type="number"
-              name="bedrooms"
-              value={formData.bedrooms}
+            {/* Transaction Type */}
+            <select
+              name="transactionType"
+              value={formData.transactionType}
               onChange={handleChange}
-              placeholder="Number of Bedrooms"
               className="w-full p-3 border rounded-lg"
-            />
+              required
+            >
+              <option value="" disabled>Do you want to Sell, Rent, or Share Room?</option>
+              <option value="Sell">Sell</option>
+              <option value="Rent">Rent</option>
+              <option value="Home owner">Home owner</option>
+            </select>
+ 
 
             {/* Submit Button */}
             <button

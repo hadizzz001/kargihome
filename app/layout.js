@@ -25,11 +25,11 @@ export default function RootLayout({ children }) {
  
   {/* Free Cookie Consent Notice Banner by ComplyDog at https://complydog.com/free-cookie-consent-banner */}
   <title>
-    Estate Agents In Prestwich, Manchester - Aubrey Lee &amp; Company
+    Estate Agents In Prestwich, Manchester - Kargihome &amp; Company
   </title>
   <meta
     name="description"
-    content="Aubrey Lee are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"
+    content="Kargihome are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"
   />
   <meta
     name="keywords"
@@ -54,28 +54,28 @@ export default function RootLayout({ children }) {
   <link
     rel="alternate"
     type="application/rss+xml"
-    title="Aubrey Lee & Company"
+    title="Kargihome & Company"
     href="images/AUBR/rss.xml"
   />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Estate Agents In Prestwich, Manchester" />
   <meta
     name="twitter:description"
-    content="Aubrey Lee are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"
+    content="Kargihome are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"
   />
   <meta
     name="twitter:image"
-    content="https://www.aubreylee.com/images/AUBR/logo.png"
+    content="https://www.kargihome.com/images/AUBR/logo.png"
   />
   <meta property="og:title" content="Estate Agents In Prestwich, Manchester" />
   <meta
     property="og:description"
-    content="Aubrey Lee are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"
+    content="Kargihome are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"
   />
   <meta property="og:type" content="website" />
   <meta
     property="og:image"
-    content="https://www.aubreylee.com/images/AUBR/logo.png"
+    content="https://www.kargihome.com/images/AUBR/logo.png"
   />
   {/* Google Analytics */}
   {/* End Google Analytics */}
@@ -122,7 +122,10 @@ export default function RootLayout({ children }) {
     type="text/css"
     href="images/AUBR/MaintenanceRequest.css"
   />
-  {/* Fontawesome */}
+         <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
 </>
 
       <body

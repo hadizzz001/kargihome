@@ -47,8 +47,10 @@ the local Georgian families and learn about unique Georgian food, culture and la
 <br /><br />
 Please contact us Today !!!!!
 <br />
-Invest and Migrate 
 <br /><br />
+<h1 style={{ color: "orange", fontSize: 30 }}>Invest and Migrate </h1>
+
+
 If you want to move to Georgia together with your family by real estate investment please contact us Today !!!
  
                   </span>
@@ -92,7 +94,7 @@ If you want to move to Georgia together with your family by real estate investme
               data-animation-direction="from-left"
               data-animation-delay={50}
             >
-              Welcome to Aubrey Lee
+              Welcome to Kargihome
             </h1>
             <h2
               className="section-highlight"
@@ -102,7 +104,7 @@ If you want to move to Georgia together with your family by real estate investme
               North Manchester’s Most Accommodating Estate Agent
             </h2>
             <p data-animation-direction="from-left" data-animation-delay={50}>
-              Since 1952, Aubrey Lee have been helping people just like you
+              Since 1952, Kargihome have been helping people just like you
               achieve their goals in the property market. In this time, we have
               established ourselves as the premier estate agent, valuer, and
               letting agent in north Manchester, combining experience and
@@ -116,7 +118,7 @@ If you want to move to Georgia together with your family by real estate investme
               aspects of residential property.
             </p>
             <p data-animation-direction="from-left" data-animation-delay={50}>
-              At Aubrey Lee, we value you and your property, and whether you’re
+              At Kargihome, we value you and your property, and whether you’re
               enquiring by phone, e-mail, or in person, you can be sure of the
               highest standard of service every time.
             </p>
@@ -181,7 +183,7 @@ If you want to move to Georgia together with your family by real estate investme
                 <h3>Register</h3>
                 <p>Get the latest properties direct to your inbox</p>
                 <a
-                  href="https://www.aubreylee.com/register.aspx"
+                  href="https://www.kargihome.com/register.aspx"
                   className="btn btn-default-color"
                 >
                   More
@@ -196,7 +198,7 @@ If you want to move to Georgia together with your family by real estate investme
                 <h3>Free Valuations</h3>
                 <p>Find out how much your property is worth</p>
                 <a
-                  href="http://valuation.aubreylee.com/"
+                  href="http://valuation.kargihome.com/"
                   target="_blank"
                   className="btn btn-default-color"
                 >
@@ -210,7 +212,7 @@ If you want to move to Georgia together with your family by real estate investme
               >
                 <i className="fa fa-thumbs-up" />
                 <h3>Testimonials</h3>
-                <p>Find out why people choose Aubrey Lee</p>
+                <p>Find out why people choose Kargihome</p>
                 <a
                   href="testimonials.aspx.html"
                   className="btn btn-default-color"
@@ -243,7 +245,7 @@ If you want to move to Georgia together with your family by real estate investme
                   >
                     <p>
                       <a href="testimonials.aspx.html">
-                        Used Aubrey Lee a few times now to rent out my property.
+                        Used Kargihome a few times now to rent out my property.
                         I have to say there is no one better for communication,
                         either on the phone which is always answered promptly or
                         the very pleasant welcome when going into the office.
@@ -261,7 +263,7 @@ If you want to move to Georgia together with your family by real estate investme
                   <blockquote className="text">
                     <p>
                       <a href="testimonials.aspx.html">
-                        Recently used Aubrey Lee following a recommendation from
+                        Recently used Kargihome following a recommendation from
                         a friend. Went to the Prestwich office and it's probably
                         the best experience I've ever had with letting agents.
                         So easy and quick to get everything done! Big thanks to
@@ -294,7 +296,7 @@ If you want to move to Georgia together with your family by real estate investme
                     <p>
                       <a href="testimonials.aspx.html">
                         It is my pleasure to express how happy being a customer
-                        and in contact with team of Aubrey Lee &amp; Co.
+                        and in contact with team of Kargihome &amp; Co.
                         Prestwich . I have been at the office twice and
                         communicated by phone,email many times .Whenever I
                         requested any thing I had been replied in a proper way
@@ -312,7 +314,7 @@ If you want to move to Georgia together with your family by real estate investme
                   <blockquote className="text">
                     <p>
                       <a href="testimonials.aspx.html">
-                        Used Aubrey Lee to manage my rental property, really
+                        Used Kargihome to manage my rental property, really
                         great service would highly recommend! Many thanks to
                         Toli and the team
                       </a>
@@ -327,12 +329,12 @@ If you want to move to Georgia together with your family by real estate investme
                   <blockquote className="text">
                     <p>
                       <a href="testimonials.aspx.html">
-                        I recently purchased a property via Aubrey Lee &amp; Co
+                        I recently purchased a property via Kargihome &amp; Co
                         I would highly recommend this agent to anyone selling or
                         buying. The staff from start to finish were proactive
                         and professional. The simplicity of my buying experience
                         was profound, entirely hassle free thanks to work by the
-                        team at Aubrey Lee.
+                        team at Kargihome.
                       </a>
                     </p>
                   </blockquote>

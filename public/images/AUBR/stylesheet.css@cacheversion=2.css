@@ -500,7 +500,7 @@ iframe[src="about:blank"] {
 }
 /* mouse grab icon */
 .grabbing {
-  cursor: url(https://www.aubreylee.com/images/AUBR/grabbing.png) 8 8, move;
+  cursor: url(https://www.kargihome.com/images/AUBR/grabbing.png) 8 8, move;
 }
 /* fix */
 .owl-carousel .owl-wrapper,
@@ -619,7 +619,7 @@ iframe[src="about:blank"] {
 /* preloading images */
 .owl-item.loading {
   min-height: 150px;
-  background: url(https://www.aubreylee.com/images/AUBR/AjaxLoader.gif) no-repeat center center;
+  background: url(https://www.kargihome.com/images/AUBR/AjaxLoader.gif) no-repeat center center;
 }
 .carousel-style1 .item {
   margin: 0 auto 35px;
@@ -1642,8 +1642,8 @@ iframe[src="about:blank"] {
 }
 .chzn-rtl .chzn-search input[type="text"] {
   padding: 4px 5px 4px 20px;
-  background: white url('https://www.aubreylee.com/images/AUBR/chzn-sprite.png') no-repeat -30px -20px;
-  background: url('https://www.aubreylee.com/images/AUBR/chzn-sprite.png') no-repeat -30px -20px;
+  background: white url('https://www.kargihome.com/images/AUBR/chzn-sprite.png') no-repeat -30px -20px;
+  background: url('https://www.kargihome.com/images/AUBR/chzn-sprite.png') no-repeat -30px -20px;
   direction: rtl;
 }
 .chzn-rtl.chzn-container-single .chzn-single div b {
@@ -1662,7 +1662,7 @@ iframe[src="about:blank"] {
   .chzn-container-multi .chzn-choices .search-choice .search-choice-close,
   .chzn-container .chzn-results-scroll-down span,
   .chzn-container .chzn-results-scroll-up span {
-    background-image: url('https://www.aubreylee.com/images/AUBR/chzn-sprite@2x.png') !important;
+    background-image: url('https://www.kargihome.com/images/AUBR/chzn-sprite@2x.png') !important;
     background-size: 52px 37px !important;
     background-repeat: no-repeat !important;
   }
@@ -2496,14 +2496,14 @@ iframe[src="about:blank"] {
 }
 .pattern-bg {
   position: relative;
-  background-image: url('https://www.aubreylee.com/images/images/patterns/pattern1.jpg');
+  background-image: url('https://www.kargihome.com/images/images/patterns/pattern1.jpg');
   width: 100%;
   height: 200%;
   background-repeat: repeat;
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .pattern-bg {
-    background-image: url('https://www.aubreylee.com/images/images/patterns/pattern1@2x.jpg');
+    background-image: url('https://www.kargihome.com/images/images/patterns/pattern1@2x.jpg');
   }
 }
 .pattern-bg:before {
@@ -6662,7 +6662,7 @@ div.cozy .pp_arrow_next:before {
   color: #fff;
 }
 div.cozy .pp_loaderIcon {
-  background: url(https://www.aubreylee.com/images/img/progress.gif) center center no-repeat;
+  background: url(https://www.kargihome.com/images/img/progress.gif) center center no-repeat;
 }
 div.pp_pic_holder a:focus {
   outline: none;
@@ -7035,31 +7035,31 @@ div.dark_square #pp_full_res .pp_inline {
   border: 1px solid #747474;
 }
 .pattern1_icon {
-  background-image: url(https://www.aubreylee.com/images/images/patterns/pattern1.jpg);
+  background-image: url(https://www.kargihome.com/images/images/patterns/pattern1.jpg);
 }
 .pattern2_icon {
-  background-image: url(https://www.aubreylee.com/images/images/patterns/pattern2.jpg);
+  background-image: url(https://www.kargihome.com/images/images/patterns/pattern2.jpg);
 }
 .pattern3_icon {
-  background-image: url(https://www.aubreylee.com/images/images/patterns/pattern3.jpg);
+  background-image: url(https://www.kargihome.com/images/images/patterns/pattern3.jpg);
 }
 .pattern4_icon {
-  background-image: url(https://www.aubreylee.com/images/images/patterns/pattern4.jpg);
+  background-image: url(https://www.kargihome.com/images/images/patterns/pattern4.jpg);
 }
 .pattern5_icon {
-  background-image: url(https://www.aubreylee.com/images/images/patterns/pattern5.jpg);
+  background-image: url(https://www.kargihome.com/images/images/patterns/pattern5.jpg);
 }
 .pattern6_icon {
-  background-image: url(https://www.aubreylee.com/images/images/patterns/pattern6.jpg);
+  background-image: url(https://www.kargihome.com/images/images/patterns/pattern6.jpg);
 }
 .pattern7_icon {
-  background-image: url(https://www.aubreylee.com/images/images/patterns/pattern7.jpg);
+  background-image: url(https://www.kargihome.com/images/images/patterns/pattern7.jpg);
 }
 .pattern8_icon {
-  background-image: url(https://www.aubreylee.com/images/images/patterns/pattern8.jpg);
+  background-image: url(https://www.kargihome.com/images/images/patterns/pattern8.jpg);
 }
 .pattern9_icon {
-  background-image: url(https://www.aubreylee.com/images/images/patterns/pattern9.jpg);
+  background-image: url(https://www.kargihome.com/images/images/patterns/pattern9.jpg);
 }
 /* #Media Queries
 ================================================== */

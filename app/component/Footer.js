@@ -1,4 +1,10 @@
 import React from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import { faRss } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -25,7 +31,7 @@ const Footer = () => {
               <i className="fa-solid fa-envelope" />{" "}
               <a
                 id="repContactUs_repContactUsEmail_0_hypContactUsEmail_0"
-                href="mailto:viewings@aubreylee.com"
+                href="mailto:info@kargihome.com"
               >
                 Email Us
               </a>
@@ -54,7 +60,7 @@ const Footer = () => {
             <li>
               <a
                 id="repFooterLinks_hypFooterLink_2"
-                href="https://www.aubreylee.com/register.aspx"
+                href="https://www.kargihome.com/register.aspx"
               >
                 Register For Updates
               </a>
@@ -145,49 +151,55 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
-            © 2024 Aubrey Lee &amp; Company |{" "}
-            <a id="hypLegalPrivacy" href="privacy-policy.htm">
-              Legal &amp; Privacy
-            </a>{" "}
-            |{" "}
-            <a id="hypSiteMap" href="sitemap.aspx.html">
-              Sitemap
-            </a>{" "}
+            © 2024 Kargihome &amp; Company
             | Software &amp; Web Design by{" "}
             <a
               id="hypAcquaintWebSite"
-              href="https://www.acquaintcrm.co.uk"
+              href="https://www.hadizproductions.com"
               target="_blank"
             >
-              Acquaint CRM
+              Hadiz Productions
             </a>
-            {/* BEGIN SOCIAL NETWORKS */}
+
+
+
             <ul className="social-networks">
-              <li>
-                <a
-                  id="hypFacebook"
-                  href="https://www.facebook.com/AubreyLee8000"
-                  target="_blank"
-                >
-                  <i className="fa-brands fa-facebook-f" />
-                </a>
-              </li>
-              <li>
-                <a
-                  id="hypLinkedIn"
-                  href="https://www.linkedin.com/company/aubrey-lee-&-co.?trk=biz-companies-cym"
-                  target="_blank"
-                >
-                  <i className="fa-brands fa-linkedin" />
-                </a>
-              </li>
-              <li>
-                <a id="hypRSS" href="images/AUBR/rss.xml" target="_blank">
-                  <i className="fa-solid fa-rss" />
-                </a>
-              </li>
-            </ul>
-            {/* END SOCIAL NETWORKS */}
+  <li>
+    <a
+      id="hypFacebook"
+      href="https://www.facebook.com/kargihome8000"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="fa-brands fa-facebook-f" />
+    </a>
+  </li>
+  <li>
+    <a
+      id="hypLinkedIn"
+      href="https://www.linkedin.com/company/aubrey-lee-&-co.?trk=biz-companies-cym"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="fa-brands fa-linkedin" />
+    </a>
+  </li>
+  <li>
+    <a id="hypRSS" href="images/AUBR/rss.xml" target="_blank" rel="noopener noreferrer">
+      <i className="fa-solid fa-rss" />
+    </a>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
           </div>
         </div>
       </div>
