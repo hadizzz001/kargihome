@@ -26,7 +26,7 @@ const HomePost = ({ exhibitions }) => {
                     <main className="mb-auto">
                         <div className="divide-y divide-gray-200 dark:divide-gray-700">
                             <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-                                <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+                                <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-black-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
                                     Properties
                                 </h1>
                             </div>
@@ -52,12 +52,12 @@ const HomePost = ({ exhibitions }) => {
                                                                     </div>
                                                                 )}
                                                             </div>
-                                                            <div className="xl:w-2/3 space-y-5">
+                                                            <div className="xl:w-2/3 space-y-5 ">
                                                                 <div className="space-y-6">
                                                                     <div>
                                                                         <h2 className="text-2xl font-bold leading-8 tracking-tight">
                                                                             <a
-                                                                                className="text-gray-900 dark:text-gray-100"
+                                                                                className="text-gray-900 dark:text-black-100"
                                                                                 href={`/${item.sys.id}`}
                                                                             >
                                                                                 {item.fields.title}
@@ -79,13 +79,13 @@ const HomePost = ({ exhibitions }) => {
                                                                         {documentToReactComponents(item.fields.description)}
                                                                     </div>
                                                                 </div>
-                                                                <div className="text-base font-medium leading-6">
+                                                                <div className="text-base font-medium leading-6 " style={{marginBottom: "2em"}}>
                                                                     <Link
                                                                         href={`/${item.sys.id}`}
                                                                         passHref
                                                                         aria-label={`Read more: ${item.fields.title}`}
                                                                     >
-                                                                        <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+                                                                        <button className="mt-4 bg-orange-500 text-white px-4 py-2 rounded">
                                                                             Read More →
                                                                         </button>
                                                                     </Link>
