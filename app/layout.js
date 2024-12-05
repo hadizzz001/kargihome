@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
-import "./globals.css"; 
+import "./globals.css";   
+
  
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,11 +26,11 @@ export default function RootLayout({ children }) {
  
   {/* Free Cookie Consent Notice Banner by ComplyDog at https://complydog.com/free-cookie-consent-banner */}
   <title>
-    Estate Agents In Prestwich, Manchester - Kargihome &amp; Company
+    Kargihome.com
   </title>
   <meta
     name="description"
-    content="Kargihome are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"
+    content="Kargihome and company was established in 1952 and is situated in Prestwich, in the Northwest of England."
   />
   <meta
     name="keywords"
@@ -38,19 +39,16 @@ export default function RootLayout({ children }) {
   <meta name="author" content="www.acquaintcrm.co.uk" />
   <meta name="robots" content="index,follow,noodp,noydir" />
   <meta name="websiteversion" content="2.2" />
-  <meta
-    name="google-site-verification"
-    content="Yddg0IAuvENf0bk3uTb6UMEracryJuOvRoBJsr4OXUY"
-  />
+ 
   <link
     href="https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans|Marck+Script"
     rel="stylesheet"
     type="text/css"
   />
-  <link rev="made" href="mailto:webmaster@brightlogic.co.uk" />
-  <link rel="icon" type="image/png" href="images/AUBR/site.ico" />
-  <link rel="shortcut icon" type="x-icon" href="images/AUBR/site.ico" />
-  <link rel="sitemap" type="application/xml" href="images/AUBR/sitemap.xml" />
+  
+  <link rel="icon" type="image/png" href="https://ucarecdn.com/2fae4aff-4e02-4ef4-a21d-f5109e0a7a25/logo.jpg" />
+  <link rel="shortcut icon" type="x-icon" href="https://ucarecdn.com/2fae4aff-4e02-4ef4-a21d-f5109e0a7a25/logo.jpg" />
+   
   <link
     rel="alternate"
     type="application/rss+xml"
@@ -58,7 +56,7 @@ export default function RootLayout({ children }) {
     href="images/AUBR/rss.xml"
   />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Estate Agents In Prestwich, Manchester" />
+  <meta name="twitter:title" content="Kargihome" />
   <meta
     name="twitter:description"
     content="Kargihome are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"

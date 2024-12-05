@@ -14,14 +14,14 @@ export const sendEmail = async (formData: FormData) => {
 
     if (firstname != null) {
         resend.emails.send({
-            from: "info@anazon.hadizproductions.com",
+            from: "info@kargihome.com",
             to: "info@kargihome.com",
             subject: "New message from your website",
             text: "Name: " + firstname + " " + lastname + "\nEmail:" + email + "\nPhone:" + phone + "\n" + message,
         })
     } else {
         resend.emails.send({
-            from: "info@anazon.hadizproductions.com",
+            from: "info@kargihome.com",
             to: "info@kargihome.com",
             subject: "New subscriber from your website",
             text: "Email:" + email,

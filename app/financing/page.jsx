@@ -75,39 +75,9 @@ const page = () => {
                 data-animation-delay={50}
                 className="animate-from-left animation-from-left"
               >
-                Kargihome and company was established in 1952 and is situated in
-                Prestwich, in the Northwest of England. There are also two,
-                independently owned, associate branches in Blackley and Crumpsall.
+                We know that a real estate investment is one of the most important decisions very likely you are about to take. Taking into account your needs we are happy to fully support mortgage arrangement in collaboration with other partners and stakeholders. For further details please contact with us TODAY.
               </p>
-              <p
-                data-animation-direction="from-left"
-                data-animation-delay={50}
-                className="animate-from-left animation-from-left"
-              >
-                We specialise in the sale, letting and management of residential
-                property and we are members of The Property Ombudsman Service
-                (TPOS).
-              </p>
-              <p
-                data-animation-direction="from-left"
-                data-animation-delay={50}
-                className="animate-from-left animation-from-left"
-              >
-                As one of the area's largest independent Estate Agents, with more
-                than 65 years combined experience in the Manchester property
-                market, here at Kargihome we are able to service all requirements
-                relating to the sale, letting or management of your residential
-                and commercial property.
-              </p>
-              <p
-                data-animation-direction="from-left"
-                data-animation-delay={50}
-                className="animate-from-left animation-from-left"
-              >
-                Thanks to our friendly and dedicated team who have helped to
-                develop Kargihome into the successful company it is today, we
-                promise to provide a service of the highest possible standard.
-              </p>
+ 
               <br />
               <br />
             </div>

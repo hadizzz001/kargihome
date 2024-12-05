@@ -1,31 +1,20 @@
 "use client";
 
 import React, { useState } from "react";
+import { sendData } from "../api/sendData/sendData";
 
 const RegistrationForm = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    mobileNumber: "",
-    address: "",
-    citizenship: "",
-    email: "",
-    profession: "",
-    transactionType: "", 
-  });
+
+  const [inputs, setInputs] = useState({});
+
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+
+    const name = e.target.name;
+    const value = e.target.value;
+    setInputs((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Form Submitted Successfully!");
-  };
 
   return (
     <div className="relative h-full w-full bg-gray-100 overflow-hidden flex flex-col lg:flex-row items-center">
@@ -68,96 +57,79 @@ const RegistrationForm = () => {
       <div className="relative z-10 flex-1 p-6">
         <div className="bg-white p-10 rounded-lg shadow-lg max-w-lg mx-auto">
           <h3 className="text-2xl font-bold mb-6 text-center">Register Now</h3>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Full Name */}
+          <form action={async (formData) => {
+            await sendData(formData);
+          }} className="space-y-4">
             <input
               type="text"
               name="fullName"
-              value={formData.fullName}
               onChange={handleChange}
               placeholder="Full Name*"
               className="w-full p-3 border rounded-lg"
               required
             />
-
-            {/* Mobile Number */}
             <input
               type="tel"
               name="mobileNumber"
-              value={formData.mobileNumber}
               onChange={handleChange}
               placeholder="Mobile Number*"
               className="w-full p-3 border rounded-lg"
               required
             />
-
-            {/* Address */}
             <input
               type="text"
               name="address"
-              value={formData.address}
               onChange={handleChange}
               placeholder="Address*"
               className="w-full p-3 border rounded-lg"
               required
             />
-
-            {/* Citizenship */}
             <input
               type="text"
               name="citizenship"
-              value={formData.citizenship}
               onChange={handleChange}
               placeholder="Citizenship*"
               className="w-full p-3 border rounded-lg"
               required
             />
-
-            {/* Email */}
             <input
               type="email"
               name="email"
-              value={formData.email}
               onChange={handleChange}
               placeholder="Email Address*"
               className="w-full p-3 border rounded-lg"
               required
             />
-
-            {/* Profession */}
             <input
               type="text"
               name="profession"
-              value={formData.profession}
               onChange={handleChange}
               placeholder="Profession*"
               className="w-full p-3 border rounded-lg"
               required
             />
-
-            {/* Transaction Type */}
             <select
               name="transactionType"
-              value={formData.transactionType}
               onChange={handleChange}
               className="w-full p-3 border rounded-lg"
               required
             >
-              <option value="" disabled>Do you want to Sell, Rent, or Share Room?</option>
+              <option value="" disabled>
+                Do you want to Sell, Rent, or Share Room?
+              </option>
               <option value="Sell">Sell</option>
               <option value="Rent">Rent</option>
               <option value="Home owner">Home owner</option>
             </select>
- 
-
-            {/* Submit Button */}
             <button
               type="submit"
               className="w-full bg-orange-500 text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-orange-600 transition duration-300"
             >
               Submit
             </button>
+
           </form>
+
         </div>
       </div>
     </div>
