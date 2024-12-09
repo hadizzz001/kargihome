@@ -29,6 +29,14 @@ export default function Home() {
 
 
                         If you want to move to Georgia together with your family by real estate investment please contact us Today !!!
+<br/>
+<br/>
+<br/>
+<br/>
+<h1 style={{ color: "orange", fontSize: 30 }}>Interior Design</h1>
+
+
+To make your new home even more beautiful and attractive our interior design team are here to design and offer you the best and amazing deals. With our innovativeness and dedications you can turn your bedrooms, living room, kitchen,  balcony into your dream home. For details please contact us Today.
 
                       </span>
                     </p>
