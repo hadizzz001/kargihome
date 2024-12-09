@@ -20,10 +20,10 @@ const RegistrationForm = () => {
     <div className="relative h-full w-full bg-gray-100 overflow-hidden flex flex-col lg:flex-row items-center">
       {/* Background Image */}
       <div
-        className="absolute inset-0 h-full w-full bg-cover bg-center"
+        className="absolute inset-0 h-full w-full bg-cover bg-right "
         style={{
           backgroundImage:
-            'url("https://www.brightlogic-estateagents.co.uk/AUBR/upload/5055-1.jpg")',
+            'url("https://ucarecdn.com/12aa2660-5986-475b-8219-1b8c4a678ddd/5c6ffe392b0142ebab4023abbb802fc6.jpg")',
         }}
       >
         <div className="bg-black bg-opacity-30 absolute inset-0" />

@@ -27,26 +27,43 @@ const page = () => {
                 defaultValue="21418F34"
               />
             </div>
-            <div
-              id="banner-container"
-              style={{
-                backgroundImage: 'url("images/AUBR/image01.jpg")',
-                backgroundRepeat: "repeat-x",
-                height: 240
-              }}
-            >
-              <div className="container">
-                <div className="col-sm-12">
-                  <h1
-                    id="banner-title"
-                    data-animation-direction="from-left"
-                    data-animation-delay={50}
-                    style={{ top: 105 }}
-                    className="animate-from-left animation-from-left"
-                  />
-                </div>
-              </div>
-            </div>
+            <div 
+  id="banner-container"
+  style={{
+    backgroundImage: 'url("https://ucarecdn.com/72b4c4f2-e292-4978-9bd8-61881ac3f30d/1e31d096ecf745368c9f67cf074f69ac.jpg")',
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "right",
+    height: 240,
+    position: "relative" // This is needed for absolute positioning inside the container
+  }}
+>
+  <div className="container">
+    <div className="col-sm-12">
+      <h1
+        id="banner-title"
+        data-animation-direction="from-left"
+        data-animation-delay={50}
+        style={{ top: 105 }}
+        className="animate-from-left animation-from-left"
+      />
+    </div>
+  </div>
+
+  {/* Added text with absolute positioning */}
+  <div
+    style={{
+      position: "absolute",
+      bottom: "10px",  // Position from the bottom of the container
+      right: "10px",   // Position from the right of the container
+      fontSize: "12px",  // Adjust font size
+      color: "#fff",    // Text color (white)
+      fontFamily: "Arial, sans-serif", // Optional: change the font
+    }}
+  >
+    Designed by Freepik
+  </div>
+</div>
+
             <div
               id="banner-container"
               style={{
@@ -70,57 +87,7 @@ const page = () => {
             </div>
             <div className="container">
               <div className="col-sm-12 ">
-                <p
-                  data-animation-direction="from-left"
-                  data-animation-delay={50}
-                  className="animate-from-left animation-from-left"
-                >
-                  Kargihome and company was established in 1952 and is situated in
-                  Prestwich, in the Northwest of England. There are also two,
-                  independently owned, associate branches in Blackley and Crumpsall.
-                </p>
-                <p
-                  data-animation-direction="from-left"
-                  data-animation-delay={50}
-                  className="animate-from-left animation-from-left"
-                >
-                  We specialise in the sale, letting and management of residential
-                  property and we are members of The Property Ombudsman Service
-                  (TPOS).
-                </p>
-                <p
-                  data-animation-direction="from-left"
-                  data-animation-delay={50}
-                  className="animate-from-left animation-from-left"
-                >
-                  As one of the area's largest independent Estate Agents, with more
-                  than 65 years combined experience in the Manchester property
-                  market, here at Kargihome we are able to service all requirements
-                  relating to the sale, letting or management of your residential
-                  and commercial property.
-                </p>
-                <p
-                  data-animation-direction="from-left"
-                  data-animation-delay={50}
-                  className="animate-from-left animation-from-left"
-                >
-                  Thanks to our friendly and dedicated team who have helped to
-                  develop Kargihome into the successful company it is today, we
-                  promise to provide a service of the highest possible standard.
-                </p>
-                <br />
-                <br />
-
-
-
-
-
-
-
-
-
-
-
+  
 
                 <p
                   data-animation-direction="from-left"

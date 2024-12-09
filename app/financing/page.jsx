@@ -30,8 +30,9 @@ const page = () => {
           <div
             id="banner-container"
             style={{
-              backgroundImage: 'url("images/AUBR/image01.jpg")',
-              backgroundRepeat: "repeat-x",
+              backgroundImage: 'url("https://ucarecdn.com/632f7135-bc98-4095-bc8d-70fb0529dfbf/2b7292dfae774590ac1e0a6becc09457.jpg")', 
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "right",
               height: 240
             }}
           >
