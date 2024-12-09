@@ -28,26 +28,42 @@ const page = () => {
             />
           </div>
           <div
-            id="banner-container"
-            style={{
-              backgroundImage: 'url("https://ucarecdn.com/632f7135-bc98-4095-bc8d-70fb0529dfbf/2b7292dfae774590ac1e0a6becc09457.jpg")', 
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "right",
-              height: 240
-            }}
-          >
-            <div className="container">
-              <div className="col-sm-12">
-                <h1
-                  id="banner-title"
-                  data-animation-direction="from-left"
-                  data-animation-delay={50}
-                  style={{ top: 105 }}
-                  className="animate-from-left animation-from-left"
-                />
-              </div>
-            </div>
-          </div>
+  id="banner-container"
+  style={{
+    backgroundImage: 'url("https://ucarecdn.com/632f7135-bc98-4095-bc8d-70fb0529dfbf/2b7292dfae774590ac1e0a6becc09457.jpg")',
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "right",
+    height: 240,
+    position: "relative" // Ensure text is positioned relative to this container
+  }}
+>
+  <div className="container">
+    <div className="col-sm-12">
+      <h1
+        id="banner-title"
+        data-animation-direction="from-left"
+        data-animation-delay={50}
+        style={{ top: 105 }}
+        className="animate-from-left animation-from-left"
+      />
+    </div>
+  </div>
+
+  {/* Added text with absolute positioning */}
+  <div
+    style={{
+      position: "absolute",
+      bottom: "10px",  // Position from the bottom of the container
+      right: "10px",   // Position from the right of the container
+      fontSize: "12px",  // Adjust font size
+      color: "#000",    // Text color (white)
+      fontFamily: "Arial, sans-serif", // Optional: change the font
+    }}
+  >
+    Designed by Freepik
+  </div>
+</div>
+
           <div
             id="banner-container"
             style={{

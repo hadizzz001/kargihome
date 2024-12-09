@@ -20,14 +20,29 @@ const RegistrationForm = () => {
     <div className="relative h-full w-full bg-gray-100 overflow-hidden flex flex-col lg:flex-row items-center">
       {/* Background Image */}
       <div
-        className="absolute inset-0 h-full w-full bg-cover bg-right "
-        style={{
-          backgroundImage:
-            'url("https://ucarecdn.com/12aa2660-5986-475b-8219-1b8c4a678ddd/5c6ffe392b0142ebab4023abbb802fc6.jpg")',
-        }}
-      >
-        <div className="bg-black bg-opacity-30 absolute inset-0" />
-      </div>
+  className="absolute inset-0 h-full w-full bg-cover bg-right"
+  style={{
+    backgroundImage:
+      'url("https://ucarecdn.com/12aa2660-5986-475b-8219-1b8c4a678ddd/5c6ffe392b0142ebab4023abbb802fc6.jpg")',
+  }}
+>
+  <div className="bg-black bg-opacity-30 absolute inset-0" />
+
+  {/* Added text with absolute positioning */}
+  <div
+    style={{
+      position: "absolute",
+      bottom: "10px",  // Position from the bottom of the container
+      right: "10px",   // Position from the right of the container
+      fontSize: "12px",  // Adjust font size
+      color: "#fff",    // Text color (white)
+      fontFamily: "Arial, sans-serif", // Optional: change the font
+    }}
+  >
+    Designed by Freepik
+  </div>
+</div>
+
 
       {/* Left Section */}
       <div className="relative z-10 flex-1 p-8 space-y-4 text-center">
