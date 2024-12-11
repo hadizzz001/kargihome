@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
   </title>
   <meta
     name="description"
-    content="Kargihome and company was established in 1952 and is situated in Prestwich, in the Northwest of England."
+    content="Kargihome.com is a real estate agency based in Tbilisi Georgia"
   />
   <meta
     name="keywords"
