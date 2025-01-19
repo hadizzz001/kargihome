@@ -23,7 +23,7 @@ const Navbar = () => {
             <div className="row">
               <div className="col-sm-12">
                 <a style={{ textIndent: 'none', display: "inline-grid", marginTop: "2em", textDecoration: "none" }} href="/">
-                  <h1 style={{ color: 'white', fontFamily: 'Open Sans', fontWeight: 'bolder' }}>kargihome<b style={{ color: 'orange', fontSize: '50px' }}>.</b>com</h1>
+                  <h1 style={{ color: 'white', fontFamily: 'Open Sans', fontWeight: 'bolder' }}>hadizproductions<b style={{ color: 'orange', fontSize: '50px' }}>.</b>com</h1>
                 </a>
                 {/* BEGIN MAIN MENU */}
 

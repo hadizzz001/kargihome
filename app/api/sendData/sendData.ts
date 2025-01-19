@@ -19,8 +19,8 @@ export const sendData = async (formData) => {
         // Sending email logic
         if (fullName) {
             await resend.emails.send({
-                from: "info@kargihome.com",
-                to: "info@kargihome.com",
+                from: "info@hadizproductions",
+                to: "info@hadizproductions",
                 subject: "New message from your website",
                 text: `
                     Full Name: ${fullName}
@@ -34,8 +34,8 @@ export const sendData = async (formData) => {
             });
         } else {
             await resend.emails.send({
-                from: "info@kargihome.com",
-                to: "info@kargihome.com",
+                from: "info@hadizproductions",
+                to: "info@hadizproductions",
                 subject: "New subscriber from your website",
                 text: `Email: ${email}`,
             });

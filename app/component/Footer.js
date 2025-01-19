@@ -31,7 +31,7 @@ const Footer = () => {
               <i className="fa-solid fa-envelope" />{" "}
               <a
                 id="repContactUs_repContactUsEmail_0_hypContactUsEmail_0"
-                href="mailto:info@kargihome.com"
+                href="mailto:info@hadizproductions"
               >
                 Email Us
               </a>
@@ -46,7 +46,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
-            © 2024 Kargihome &amp; Company
+            © 2024 hadizproductions &amp; Company
             | Software &amp; Web Design by{" "}
             <a
               id="hypAcquaintWebSite"
@@ -62,7 +62,7 @@ const Footer = () => {
   <li>
     <a
       id="hypFacebook"
-      href="https://www.facebook.com/kargihome8000"
+      href="https://www.facebook.com/hadizproductions8000"
       target="_blank"
       rel="noopener noreferrer"
     >
