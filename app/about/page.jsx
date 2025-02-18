@@ -80,7 +80,7 @@ const page = () => {
                     style={{}}
                     className="animate-from-left animation-from-left"
                   >
-                    About hadizproductions
+                    About kargihome
                   </h1>
                 </div>
               </div>
@@ -94,7 +94,7 @@ const page = () => {
                   data-animation-delay={50}
                   className="animate-from-left animation-from-left "
                 >
-                  hadizproductions is a real estate agency based in Tbilisi Georgia. Our primary tasks are :
+                  kargihome is a real estate agency based in Tbilisi Georgia. Our primary tasks are :
 
                   <ul className="list-disc list-inside space-y-4  m-5 mb-20">
                     <li>Help to buy both commercial and residential properties.</li>

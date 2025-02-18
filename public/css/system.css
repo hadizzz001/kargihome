@@ -167,25 +167,25 @@ Author: Bright Logic
 
 /* # Property Status Box / Panel */
 .status-available{
-	background: url("https://www.hadizproductions/css/Statusgreen.png");
+	background: url("https://www.kargihome/css/Statusgreen.png");
 }
 .status-underoffer {
-	background: url("https://www.hadizproductions/css/Statusorange.png");
+	background: url("https://www.kargihome/css/Statusorange.png");
 }
 .status-exclusive {
-	background: url("https://www.hadizproductions/css/Statuspurple.png");
+	background: url("https://www.kargihome/css/Statuspurple.png");
 }
 .status-sold {
-	background: url("https://www.hadizproductions/css/Statusred.png");
+	background: url("https://www.kargihome/css/Statusred.png");
 }
 .status-newinstruction {
-	background: url("https://www.hadizproductions/css/Statuspurple.png");
+	background: url("https://www.kargihome/css/Statuspurple.png");
 }
 .status-let {
-	background: url("https://www.hadizproductions/css/Statusred.png");
+	background: url("https://www.kargihome/css/Statusred.png");
 }
 .status-notavailable {
-	background: url("https://www.hadizproductions/css/Statusred.png");
+	background: url("https://www.kargihome/css/Statusred.png");
 }
 
 /* # Property Status Text */

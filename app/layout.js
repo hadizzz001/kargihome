@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";   
+import WhatsAppIcon from './component/WhatsAppIcon';
 
  
 const geistSans = localFont({
@@ -26,11 +27,11 @@ export default function RootLayout({ children }) {
  
   {/* Free Cookie Consent Notice Banner by ComplyDog at https://complydog.com/free-cookie-consent-banner */}
   <title>
-    hadizproductions
+    kargihome
   </title>
   <meta
     name="description"
-    content="hadizproductions is a real estate agency based in Tbilisi Georgia"
+    content="kargihome is a real estate agency based in Tbilisi Georgia"
   />
   <meta
     name="keywords"
@@ -52,28 +53,28 @@ export default function RootLayout({ children }) {
   <link
     rel="alternate"
     type="application/rss+xml"
-    title="hadizproductions & Company"
+    title="kargihome & Company"
     href="images/AUBR/rss.xml"
   />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="hadizproductions" />
+  <meta name="twitter:title" content="kargihome" />
   <meta
     name="twitter:description"
-    content="hadizproductions are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"
+    content="kargihome are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"
   />
   <meta
     name="twitter:image"
-    content="https://www.hadizproductions/images/AUBR/logo.png"
+    content="https://www.kargihome/images/AUBR/logo.png"
   />
   <meta property="og:title" content="Estate Agents In Prestwich, Manchester" />
   <meta
     property="og:description"
-    content="hadizproductions are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"
+    content="kargihome are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"
   />
   <meta property="og:type" content="website" />
   <meta
     property="og:image"
-    content="https://www.hadizproductions/images/AUBR/logo.png"
+    content="https://www.kargihome/images/AUBR/logo.png"
   />
   {/* Google Analytics */}
   {/* End Google Analytics */}
@@ -129,6 +130,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <WhatsAppIcon />
         {children}
       </body>
     </html>

@@ -22,16 +22,16 @@ const Footer = () => {
               <i className="fa-solid fa-phone" />{" "}
               <a
                 id="repContactUs_repContactUsTelephone_0_hypContactUsTelephone_0"
-                href="tel:01617988000"
+                href="tel:+995597137561"
               >
-                0161 798 8000
+                +995 597 137 561
               </a>
             </li>
             <li>
               <i className="fa-solid fa-envelope" />{" "}
               <a
                 id="repContactUs_repContactUsEmail_0_hypContactUsEmail_0"
-                href="mailto:info@hadizproductions"
+                href="mailto:info@kargihome.com"
               >
                 Email Us
               </a>
@@ -46,15 +46,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
-            © 2024 hadizproductions &amp; Company
-            | Software &amp; Web Design by{" "}
-            <a
-              id="hypAcquaintWebSite"
-              href="https://www.hadizproductions.com"
-              target="_blank"
-            >
-              Hadiz Productions
-            </a>
+            © 2024 kargihome 
 
 
 
@@ -62,7 +54,7 @@ const Footer = () => {
   <li>
     <a
       id="hypFacebook"
-      href="https://www.facebook.com/hadizproductions8000"
+      href="https://www.facebook.com/kargihome8000"
       target="_blank"
       rel="noopener noreferrer"
     >
