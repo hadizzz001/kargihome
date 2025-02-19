@@ -8,10 +8,11 @@ import { fetchTemp1 } from "../../utils/index";
 const PropertyDetails = () => {
   const [allTemp1, setTemp1] = useState(null);
   const [loading, setLoading] = useState(true);
-  const searchParams = new URLSearchParams(window.location.search);
-  const search = searchParams.get("id");
+
 
   useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const search = searchParams.get("id");
     const fetchData = async () => {
       try {
         const response = await fetch(`api/posts/${search}`);
