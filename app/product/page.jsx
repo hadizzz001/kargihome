@@ -8,19 +8,25 @@ import { fetchTemp1 } from "../../utils/index";
 const PropertyDetails = () => {
   const [allTemp1, setTemp1] = useState(null);
   const [loading, setLoading] = useState(true);
+  const searchParams = new URLSearchParams(window.location.search);
+  const search = searchParams.get("id");
 
   useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const search = searchParams.get("id");
-
     const fetchData = async () => {
-      const data = await fetchTemp1(search);
-      setTemp1(data);
-      setLoading(false);
+      try {
+        const response = await fetch(`api/posts/${search}`);
+        const data = await response.json();
+        console.log("data: ", data);
+
+        setTemp1(data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching the description:", error);
+      }
     };
 
     fetchData();
-  }, []); // Ensure this runs once on mount
+  }, []);
 
   if (loading) {
     return (
@@ -37,11 +43,14 @@ const PropertyDetails = () => {
         <section className="container">
           <main className="mb-auto">
             <div className="space-y-6 pb-8 pt-6">
-              <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+              <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-black sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
                 {allTemp1[0].title}
               </h1>
-              <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                <p>{allTemp1[0].description}</p>
+              <div className="prose max-w-none text-black dark:text-black">
+                
+                <p 
+                                  dangerouslySetInnerHTML={{ __html: allTemp1[0].description }}
+                                />
               </div>
               <div className="space-y-4">
                 <img

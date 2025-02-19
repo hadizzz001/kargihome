@@ -18,10 +18,11 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
-    "@prisma/client": "^6.0.1",
+    "@prisma/client": "^6.4.0",
     "@splidejs/react-splide": "^0.7.12",
     "bootstrap": "^5.3.3",
     "contentful": "^11.2.5",
+    "mongodb": "^6.13.0",
     "next": "15.0.2",
     "react": "^19.0.0-rc-02c0e824-20241028",
     "react-bootstrap": "^2.10.5",
@@ -38,7 +39,7 @@
     "@types/react-slick": "^0.23.13",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
-    "prisma": "^6.0.1",
+    "prisma": "^6.4.0",
     "tailwindcss": "^3.4.15",
     "typescript": "5.7.2"
   }

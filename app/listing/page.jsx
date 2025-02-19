@@ -8,16 +8,22 @@ const Body = () => {
   const [allTemp, setTemp] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchTemp();
-      setTemp(data);
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch("/api/posts");
+        const data = await response.json();
+        setTemp(data);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
     };
-    fetchData();
+
+    fetchCategories();
   }, []);
 
 
-  console.log(allTemp);
-  
+
+
 
   return (
     <>
@@ -28,14 +34,14 @@ const Body = () => {
           <main className="mb-auto">
             <div className="divide-y divide-gray-200 dark:divide-gray-700">
               <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-                <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+                <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-black dark:text-black sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
                   Properties
                 </h1>
               </div>
               <ul className="divide-y divide-gray-200 dark:divide-gray-700">
                 {allTemp && allTemp.length > 0 ? (
                   allTemp.map((item) => (
-                    <li key={item.id} className="py-12">
+                    <li key={item._id} className="py-12">
                       <article>
                         <div className="flex flex-col gap-6 xl:flex-row xl:items-center">
                           {/* Image Section */}
@@ -53,8 +59,8 @@ const Body = () => {
                               <div>
                                 <h2 className="text-2xl font-bold leading-8 tracking-tight">
                                   <a
-                                    className="text-gray-900 dark:text-gray-100"
-                                    href={`/product?id=${item.id}`}
+                                    className="text-black dark:text-black"
+                                    href={`/product?id=${item._id}`}
                                   >
                                     {item.title}
                                   </a>
@@ -73,14 +79,16 @@ const Body = () => {
                                 </div>
                               </div>
                               <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                                {item.description}
+                                <p 
+                                  dangerouslySetInnerHTML={{ __html: item.description }}
+                                />
                               </div>
                             </div>
                             <div className="text-base font-medium leading-6">
                               <a
                                 className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                                 aria-label={`Read more: "${item.title}"`}
-                                href={`/product?id=${item.id}`}
+                                href={`/product?id=${item._id}`}
                               >
                                 Read more →
                               </a>
