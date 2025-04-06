@@ -1,6 +1,5 @@
 "use server";
-import { Resend } from "resend";
-import { redirect } from "next/navigation";
+import { Resend } from "resend"; 
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -19,8 +18,8 @@ export const sendData = async (formData) => {
         // Sending email logic
         if (fullName) {
             await resend.emails.send({
-                from: "info@kargihome",
-                to: "info@kargihome",
+                from: "info@kargihome.com",
+                to: "info@kargihome.com",
                 subject: "New message from your website",
                 text: `
                     Full Name: ${fullName}
@@ -34,15 +33,20 @@ export const sendData = async (formData) => {
             });
         } else {
             await resend.emails.send({
-                from: "info@kargihome",
-                to: "info@kargihome",
+                from: "info@kargihome.com",
+                to: "info@kargihome.com",
                 subject: "New subscriber from your website",
                 text: `Email: ${email}`,
             });
         }
 
-        // Redirect upon success
-        redirect("/thank");
+        resend.emails.send({
+            from: "info@kargihome.com",
+            to: email+"",
+            subject: "Kargihome Team",
+            text: "Thanks for registration with us. One of our agents will contact you shortly.",
+        }) 
+        // redirect("/thank");
     } catch (error) {
         console.error("Error sending email:", error);
 

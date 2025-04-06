@@ -60,6 +60,8 @@ const PropertyDetails = () => {
                   className="w-full max-w-4xl rounded-lg object-cover"
                 />
                 <div className="text-lg font-semibold">
+                  <p className="text-[20px]">Type: {allTemp1[0].type}</p>
+                  <p className="text-[20px]">Number of bedrooms: {allTemp1[0].bed}</p>
                   <p className="text-[20px]">Category: {allTemp1[0].category}</p>
                   <p className="text-[20px]">Price: ${allTemp1[0].price}</p>
                 </div>
