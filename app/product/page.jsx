@@ -54,11 +54,16 @@ const PropertyDetails = () => {
                                 />
               </div>
               <div className="space-y-4">
-                <img
-                  src={allTemp1[0].img[0]}
-                  alt={allTemp1[0].title}
-                  className="w-full max-w-4xl rounded-lg object-cover"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  {allTemp1[0].img.map((imageUrl, index) => (
+    <img
+      key={index}
+      src={imageUrl}
+      alt={`${allTemp1[0].title} - ${index + 1}`}
+      className="w-full h-64 object-cover rounded-lg shadow-md"
+    />
+  ))}
+</div>
                 <div className="text-lg font-semibold">
                   <p className="text-[20px]">Type: {allTemp1[0].type}</p>
                   <p className="text-[20px]">Number of bedrooms: {allTemp1[0].bed}</p>

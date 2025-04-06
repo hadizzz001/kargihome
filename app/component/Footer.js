@@ -46,7 +46,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
-            © 2024 kargihome 
+          © {new Date().getFullYear()} kargihome
 
 
 
