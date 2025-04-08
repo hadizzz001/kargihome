@@ -1,92 +1,83 @@
-"use client"
-// components/Navbar.js
+"use client";
 import Link from 'next/link';
-import { useState } from 'react';  
-import Nav from './Nav';
+import { useState, useEffect } from 'react';
+import LanguageDropdown from "./LanguageDropdown";
+import { useLanguage } from "../contexts/LanguageContext";
+
+const originalLabels = {
+  home: "Home",
+  about: "About",
+  listing: "Listings",
+  financing: "Financing",
+  contact: "Contact"
+};
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { language } = useLanguage();
+  const [labels, setLabels] = useState(originalLabels);
 
+  useEffect(() => {
+    console.log("🌐 Language changed to:", language);
+
+    const fetchTranslations = async () => {
+      if (language === "en") {
+        console.log("Language is English, resetting to original labels.");
+        setLabels(originalLabels);
+        return;
+      }
+
+      try {
+        const entries = await Promise.all(
+          Object.entries(originalLabels).map(async ([key, text]) => {
+            console.log(`🔁 Translating: "${text}"`);
+            const res = await fetch("https://argos-translate.onrender.com/translate", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                source_language: "en",
+                target_language: language,
+                text: text,
+              }),
+            });
+
+            const data = await res.json();
+            console.log(`✅ Translated "${text}" ➜ "${data.translatedText}"`);
+            return [key, data.translatedText || text];
+          })
+        );
+
+        const updatedLabels = Object.fromEntries(entries);
+        setLabels(updatedLabels);
+        console.log("🆕 Updated labels:", updatedLabels);
+      } catch (err) {
+        console.error("❌ Error during translation:", err);
+        setLabels(originalLabels); // fallback
+      }
+    };
+
+    fetchTranslations();
+  }, [language]);
 
   return (
     <header id="header">
-      <div className="sticky-wrapper menu1">
-        <div id="nav-section" className="stuck">
-          <div id="topbar">
-            <div className="container">
-              <div className="row">
-
-              </div>
-            </div>
-          </div>
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-12">
-                <a style={{ textIndent: 'none', display: "inline-grid", marginTop: "2em", textDecoration: "none" }} href="/">
-                  <h1 style={{ color: 'white', fontFamily: 'Open Sans', fontWeight: 'bolder' }}>kargihome<b style={{ color: 'orange', fontSize: '50px' }}>.</b>com</h1>
-                </a>
-                {/* BEGIN MAIN MENU */}
-
-<Nav />
-
-                <nav className="navbar"> 
-
-
-                  <ul className="nav navbar-nav">
-                    <li>
-                      <a href="/"> Home</a>
-                    </li>
-                    <li className="dropdown">
-                      <a
-                        href="/about"
-                        data-toggle="dropdown"
-                        data-hover="dropdown"
-                      >
-                        About
-
-                      </a>
-                    </li>
-                    <li className="dropdown">
-                      <a
-                        href="/listing"
-                        data-toggle="dropdown"
-                        data-hover="dropdown"
-                      >
-                        Listings
-
-                      </a>
-                    </li>
-                    <li className="dropdown">
-                      <a
-                        href="/financing"
-                        data-toggle="dropdown"
-                        data-hover="dropdown"
-                      >
-                        Financing
-
-                      </a>
-                    </li>
-                    <li className="dropdown">
-                      <a
-                        href="/contact"
-                        data-toggle="dropdown"
-                        data-hover="dropdown"
-                      >
-                        Contact
-
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
- 
-                {/* END MAIN MENU */}
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="container">
+        <h1 style={{ color: 'white' }}>
+          kargihome<b style={{ color: 'orange' }}>.com</b>
+        </h1>
+        <nav className="navbar">
+          <ul className="nav navbar-nav">
+            <li><a href="/">{labels.home}</a></li>
+            <li><a href="/about">{labels.about}</a></li>
+            <li><a href="/listing">{labels.listing}</a></li>
+            <li><a href="/financing">{labels.financing}</a></li>
+            <li><a href="/contact">{labels.contact}</a></li>
+            <li><LanguageDropdown /></li>
+          </ul>
+        </nav>
       </div>
     </header>
-
   );
 };
 

@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";   
 import WhatsAppIcon from './component/WhatsAppIcon';
+import { LanguageProvider } from './contexts/LanguageContext';
 
  
 const geistSans = localFont({
@@ -130,8 +131,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <LanguageProvider>
         <WhatsAppIcon />
         {children}
+        </LanguageProvider>
       </body>
     </html>
   );
