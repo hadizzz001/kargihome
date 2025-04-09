@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from "../contexts/LanguageContext"; // Import language context
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
