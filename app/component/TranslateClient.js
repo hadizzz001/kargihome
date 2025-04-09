@@ -1,72 +1,57 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
-const LANGUAGES = [
-  { code: "en", name: "English", flag: "🇬🇧" },
-  { code: "ru", name: "Russian", flag: "🇷🇺" },
-  { code: "ar", name: "Arabic", flag: "🇸🇦" },
-];
-
-export default function TranslateClient() {
-  const [text, setText] = useState("");
-  const [translated, setTranslated] = useState("");
-  const [targetLang, setTargetLang] = useState("en");
+export default function TranslateForm() {
+  const [text, setText] = useState('');
+  const [language, setLanguage] = useState('en');
+  const [result, setResult] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleTranslate = async () => {
-    if (!text.trim()) return;
+    setLoading(true);
+    try {
+      const res = await fetch('/api/translate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text, targetLanguage: language }),
+      });
 
-    const res = await fetch("https://argos-translate.onrender.com/translate", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        text,
-        from_lang: "en", // assume input is always in English
-        to_lang: targetLang,
-      }),
-    });
-
-    const data = await res.json();
-    setTranslated(data.translatedText || data.error || "Error occurred");
+      const data = await res.json();
+      setResult(data.translatedText || 'Error: No translation');
+    } catch (err) {
+      console.error(err);
+      setResult('Translation failed');
+    }
+    setLoading(false);
   };
 
   return (
-    <div className="max-w-xl mx-auto p-4 space-y-4">
-      <h1 className="text-2xl font-bold">🌍 Argos Translate</h1>
-
+    <div>
+      <h2>Translate</h2>
       <textarea
-        className="w-full p-2 border rounded"
-        rows={4}
-        placeholder="Type something in English..."
+        rows="4"
+        cols="50"
         value={text}
         onChange={(e) => setText(e.target.value)}
+        placeholder="Type something..."
       />
+      <br />
+      <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+        <option value="en">English</option>
+        <option value="ar">Arabic</option>
+        <option value="fr">French</option>
+        <option value="ru">Russian</option>
+      </select>
+      <br />
+      <button onClick={handleTranslate} disabled={loading}>
+        {loading ? 'Translating...' : 'Translate'}
+      </button>
 
-      <div className="flex items-center space-x-2">
-        <label className="font-semibold">Translate to:</label>
-        <select
-          className="p-2 border rounded"
-          value={targetLang}
-          onChange={(e) => setTargetLang(e.target.value)}
-        >
-          {LANGUAGES.map((lang) => (
-            <option key={lang.code} value={lang.code}>
-              {lang.flag} {lang.name}
-            </option>
-          ))}
-        </select>
-        <button
-          onClick={handleTranslate}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-        >
-          Translate
-        </button>
-      </div>
-
-      {translated && (
-        <div className="mt-4 p-4 bg-gray-100 rounded">
-          <strong>Translated:</strong>
-          <p>{translated}</p>
+      {result && (
+        <div>
+          <h3>Result:</h3>
+          <p>{result}</p>
         </div>
       )}
     </div>

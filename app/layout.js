@@ -126,6 +126,19 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         />
+
+
+
+
+<link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flag-icon-css/css/flag-icon.min.css"
+          />
+
+
+
+
+
 </>
 
       <body

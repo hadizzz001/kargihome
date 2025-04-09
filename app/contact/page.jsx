@@ -1,15 +1,61 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { sendEmail } from "../api/sendEmail/sendEmail";
-import Header from '../component/Header' 
-import Footer from '../component/Footer'
+import Header from "../component/Header";
+import Footer from "../component/Footer";
+import { useLanguage } from "../contexts/LanguageContext"; // Import the language context
 
 export default function Home() {
-  const router = useRouter();
+  const { language } = useLanguage(); // Get the selected language from context
   const [inputs, setInputs] = useState({});
   const [value, setValue] = useState("");
+  const [translations, setTranslations] = useState({
+    getInTouch: "GET IN TOUCH",
+    firstName: "First Name",
+    lastName: "Last Name",
+    email: "Email",
+    phone: "Phone Number",
+    message: "Message",
+    sendButton: "Send",
+  });
+
+  useEffect(() => {
+    const translateContent = async () => {
+      const contentToTranslate = {
+        getInTouch: "GET IN TOUCH",
+        firstName: "First Name",
+        lastName: "Last Name",
+        email: "Email",
+        phone: "Phone Number",
+        message: "Message",
+        sendButton: "Send",
+      };
+
+      try {
+        const translated = await Promise.all(
+          Object.entries(contentToTranslate).map(async ([key, text]) => {
+            const res = await fetch("/api/translate", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ targetLanguage: language, text }),
+            });
+
+            const data = await res.json();
+            return [key, data.translatedText || text];
+          })
+        );
+
+        setTranslations(Object.fromEntries(translated));
+      } catch (err) {
+        console.error("Translation failed", err);
+        setTranslations(contentToTranslate); // Fallback to original content if translation fails
+      }
+    };
+
+    translateContent();
+  }, [language]);
 
   const handleChange = (e) => {
     if (e.target.name === "phone") {
@@ -24,15 +70,12 @@ export default function Home() {
 
   return (
     <>
-    <Header />
+      <Header />
       <div className="">
         <div className="container-xl">
           <br />
-          <h4
-            className="br_text-2xl-serif md:br_text-3xl-serif"
-            style={{ textAlign: "center" }}
-          >
-            GET IN TOUCH
+          <h4 className="br_text-2xl-serif md:br_text-3xl-serif" style={{ textAlign: "center" }}>
+            {translations.getInTouch}
           </h4>
         </div>
       </div>
@@ -52,7 +95,7 @@ export default function Home() {
                         className="form-control"
                         name="firstname"
                         type="text"
-                        placeholder="First Name"
+                        placeholder={translations.firstName}
                         onChange={handleChange}
                         required
                       />
@@ -65,7 +108,7 @@ export default function Home() {
                         className="form-control"
                         name="lastname"
                         type="text"
-                        placeholder="Last Name"
+                        placeholder={translations.lastName}
                         onChange={handleChange}
                         required
                       />
@@ -78,7 +121,7 @@ export default function Home() {
                         className="form-control"
                         name="email"
                         type="email"
-                        placeholder="Email"
+                        placeholder={translations.email}
                         onChange={handleChange}
                         required
                       />
@@ -90,7 +133,7 @@ export default function Home() {
                         className="form-control"
                         name="phone"
                         type="text"
-                        placeholder="Phone Number"
+                        placeholder={translations.phone}
                         value={value}
                         onChange={handleChange}
                         required
@@ -104,7 +147,7 @@ export default function Home() {
                       <textarea
                         className="form-control form-control-text-area"
                         name="message"
-                        placeholder="Message"
+                        placeholder={translations.message}
                         rows={9}
                         required
                         onChange={handleChange}
@@ -121,7 +164,7 @@ export default function Home() {
                     className="klaviyo_submit_button"
                     style={{ padding: "1.5em" }}
                   >
-                    Send
+                    {translations.sendButton}
                   </button>
                 </div>
                 <div className="col-md-5"></div>

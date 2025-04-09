@@ -1,8 +1,7 @@
-"use client";
-import Link from 'next/link';
+'use client';
 import { useState, useEffect } from 'react';
-import LanguageDropdown from "./LanguageDropdown";
 import { useLanguage } from "../contexts/LanguageContext";
+import LanguageDropdown from "./LanguageDropdown";
 
 const originalLabels = {
   home: "Home",
@@ -12,16 +11,14 @@ const originalLabels = {
   contact: "Contact"
 };
 
-const Navbar = () => {
+const Header = () => {
   const { language } = useLanguage();
   const [labels, setLabels] = useState(originalLabels);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    console.log("🌐 Language changed to:", language);
-
     const fetchTranslations = async () => {
       if (language === "en") {
-        console.log("Language is English, resetting to original labels.");
         setLabels(originalLabels);
         return;
       }
@@ -29,31 +26,21 @@ const Navbar = () => {
       try {
         const entries = await Promise.all(
           Object.entries(originalLabels).map(async ([key, text]) => {
-            console.log(`🔁 Translating: "${text}"`);
-            const res = await fetch("https://argos-translate.onrender.com/translate", {
+            const res = await fetch("/api/translate", {
               method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                source_language: "en",
-                target_language: language,
-                text: text,
-              }),
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ targetLanguage: language, text }),
             });
 
             const data = await res.json();
-            console.log(`✅ Translated "${text}" ➜ "${data.translatedText}"`);
             return [key, data.translatedText || text];
           })
         );
 
-        const updatedLabels = Object.fromEntries(entries);
-        setLabels(updatedLabels);
-        console.log("🆕 Updated labels:", updatedLabels);
+        setLabels(Object.fromEntries(entries));
       } catch (err) {
-        console.error("❌ Error during translation:", err);
-        setLabels(originalLabels); // fallback
+        console.error("Translation failed", err);
+        setLabels(originalLabels);
       }
     };
 
@@ -61,24 +48,47 @@ const Navbar = () => {
   }, [language]);
 
   return (
-    <header id="header">
-      <div className="container">
-        <h1 style={{ color: 'white' }}>
-          kargihome<b style={{ color: 'orange' }}>.com</b>
-        </h1>
-        <nav className="navbar">
-          <ul className="nav navbar-nav">
-            <li><a href="/">{labels.home}</a></li>
-            <li><a href="/about">{labels.about}</a></li>
-            <li><a href="/listing">{labels.listing}</a></li>
-            <li><a href="/financing">{labels.financing}</a></li>
-            <li><a href="/contact">{labels.contact}</a></li>
-            <li><LanguageDropdown /></li>
-          </ul>
-        </nav>
+    <header className="site-header">
+      {/* Logo */}
+      <a href="/" className="site-title">
+        kargihome<span className="dot">.</span>com
+      </a>
+
+      {/* Desktop Nav */}
+      <nav className="navbar-custom">
+        <ul className="nav-links">
+          <li><a href="/" className="nav-item">{labels.home}</a></li>
+          <li><a href="/about" className="nav-item">{labels.about}</a></li>
+          <li><a href="/listing" className="nav-item">{labels.listing}</a></li>
+          <li><a href="/financing" className="nav-item">{labels.financing}</a></li>
+          <li><a href="/contact" className="nav-item">{labels.contact}</a></li>
+          <li><LanguageDropdown /></li>
+        </ul>
+      </nav>
+
+      {/* Hamburger Icon */}
+      <div className="hamburger-icon" onClick={() => setIsMenuOpen(true)}>
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
+        <div className="mobile-language">
+          <LanguageDropdown />
+        </div>
+        <div className="close-btn" onClick={() => setIsMenuOpen(false)}>&times;</div>
+
+        <a href="/" onClick={() => setIsMenuOpen(false)}>{labels.home}</a>
+        <a href="/about" onClick={() => setIsMenuOpen(false)}>{labels.about}</a>
+        <a href="/listing" onClick={() => setIsMenuOpen(false)}>{labels.listing}</a>
+        <a href="/financing" onClick={() => setIsMenuOpen(false)}>{labels.financing}</a>
+        <a href="/contact" onClick={() => setIsMenuOpen(false)}>{labels.contact}</a>
       </div>
     </header>
   );
 };
 
-export default Navbar;
+export default Header;
