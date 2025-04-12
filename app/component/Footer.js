@@ -52,9 +52,7 @@ const Footer = () => {
           <div id="footer-contactus" className="block col-sm-4">
             <h3>{translatedContent.sendMessage || "Send Us A Message"}</h3>
             <ul className="footer-contacts">
-              <li>
-                <i className="fa-solid fa-location-dot" /> {translatedContent.address || "39 Bury New Road, Prestwich, Manchester, M25 9JY"}
-              </li>
+         
               <li>
                 <i className="fa-solid fa-phone" />{" "}
                 <a
@@ -86,7 +84,7 @@ const Footer = () => {
             © {new Date().getFullYear()} kargihome
 
               <ul className="social-networks">
-                <li>
+                {/* <li>
                   <a
                     id="hypFacebook"
                     href="https://www.facebook.com/kargihome8000"
@@ -95,22 +93,8 @@ const Footer = () => {
                   >
                     <FontAwesomeIcon icon={faFacebookF} />
                   </a>
-                </li>
-                <li>
-                  <a
-                    id="hypLinkedIn"
-                    href="https://www.linkedin.com/company/aubrey-lee-&-co.?trk=biz-companies-cym"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                </li>
-                <li>
-                  <a id="hypRSS" href="images/AUBR/rss.xml" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faRss} />
-                  </a>
-                </li>
+                </li> */}
+                 
               </ul>
             </div>
           </div>
