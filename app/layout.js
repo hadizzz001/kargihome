@@ -26,7 +26,6 @@ export default function RootLayout({ children }) {
       <>
   <meta charSet="utf-8" /> 
  
-  {/* Free Cookie Consent Notice Banner by ComplyDog at https://complydog.com/free-cookie-consent-banner */}
   <title>
     kargihome
   </title>
@@ -36,7 +35,7 @@ export default function RootLayout({ children }) {
   />
   <meta
     name="keywords"
-    content="Prestwich Estate Agents,Lettings Agents,Property For Sale,Property For Rent,Property,Houses,Homes"
+    content="Estate Agents,Lettings Agents,Property For Sale,Property For Rent,Property,Houses,Homes"
   />
   <meta name="author" content="www.acquaintcrm.co.uk" />
   <meta name="robots" content="index,follow,noodp,noydir" />
@@ -61,46 +60,40 @@ export default function RootLayout({ children }) {
   <meta name="twitter:title" content="kargihome" />
   <meta
     name="twitter:description"
-    content="kargihome are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"
+    content="kargihome is a real estate agency based in Georgia."
   />
   <meta
     name="twitter:image"
-    content="https://www.kargihome/images/AUBR/logo.png"
+    content="https://res.cloudinary.com/dqzzfskhw/image/upload/v1745011505/logo1_ld3wc1.jpg"
   />
   <meta property="og:title" content="Estate Agents In Prestwich, Manchester" />
   <meta
     property="og:description"
-    content="kargihome are one of north Manchester's leading estate agents covering Prestwich, Salford & Whitefield"
+    content="kargihome is a real estate agency based in Georgia."
   />
   <meta property="og:type" content="website" />
   <meta
     property="og:image"
-    content="https://www.kargihome/images/AUBR/logo.png"
+    content="https://res.cloudinary.com/dqzzfskhw/image/upload/v1745011505/logo1_ld3wc1.jpg"
   />
-  {/* Google Analytics */}
-  {/* End Google Analytics */}
-  {/* Mobile Meta Tag */}
+ 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {/* IE6-8 support of HTML5 elements */}
-  {/*[if lt IE 9]>
+ 
 	   
-	<![endif]*/}
-  {/* Bootstrap CSS */}
+ 
   <link href="css/bootstrap.min.css" rel="stylesheet" />
-  {/* Extra CSS - moved from stylesheet.css by GJ */}
+ 
   <link href="css/font-awesome.min.css" rel="stylesheet" />
   <link href="css/cozy-real-estate-font.css" rel="stylesheet" />
   <link href="css/owl.transitions.css" rel="stylesheet" />
-  {/* Revolution Slider CSS settings */}
+ 
   <link
     rel="stylesheet"
     type="text/css"
     href="rs-plugin/css/settings.css"
     media="screen"
   />
-  {/* Modernizr */}
-  {/* Head place holder */}
-  {/* WebScriptHeader place holder */}
+ 
   <link
     href="https://webutils.acquaintcrm.co.uk/css/sweetalert2.css"
     rel="stylesheet"
