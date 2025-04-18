@@ -34,9 +34,7 @@ export default function RootLayout({ children }) {
     name="keywords"
     content="Estate Agents,Lettings Agents,Property For Sale,Property For Rent,Property,Houses,Homes"
   />
-  <meta name="author" content="www.acquaintcrm.co.uk" />
-  <meta name="robots" content="index,follow,noodp,noydir" />
-  <meta name="websiteversion" content="2.2" />
+ 
  
   <link
     href="https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans|Marck+Script"
@@ -47,12 +45,7 @@ export default function RootLayout({ children }) {
   <link rel="icon" type="image/png" href="https://ucarecdn.com/2fae4aff-4e02-4ef4-a21d-f5109e0a7a25/logo.jpg" />
   <link rel="shortcut icon" type="x-icon" href="https://ucarecdn.com/2fae4aff-4e02-4ef4-a21d-f5109e0a7a25/logo.jpg" />
    
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="kargihome & Company"
-    href="images/AUBR/rss.xml"
-  />
+ 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="kargihome" />
   <meta
