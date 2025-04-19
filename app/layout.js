@@ -46,16 +46,7 @@ export default function RootLayout({ children }) {
   <link rel="shortcut icon" type="x-icon" href="https://ucarecdn.com/2fae4aff-4e02-4ef4-a21d-f5109e0a7a25/logo.jpg" />
    
  
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="kargihome" />
-  <meta
-    name="twitter:description"
-    content="kargihome is a real estate agency based in Georgia."
-  />
-  <meta
-    name="twitter:image"
-    content="https://res.cloudinary.com/dqzzfskhw/image/upload/v1745011505/logo1_ld3wc1.jpg"
-  />
+  
   <meta property="og:title" content="kargihome is a real estate agency based in Georgia." />
   <meta
     property="og:description"
