@@ -60,15 +60,15 @@ export default function Home() {
                       <br /><br />
                       {translatedContent.contactUs}
                       <br /><br /><br />
-                      <h1 style={{ color: "orange", fontSize: 30 }}>
+                      
                         {translatedContent.investText}
-                      </h1>
+                       
                       <br />
                       <br />
                       <br />
-                      <h1 style={{ color: "orange", fontSize: 30 }}>
+                     
                         {translatedContent.interiorDesignText}
-                      </h1>
+                      
                     </span>
                   </p>
                   <br />

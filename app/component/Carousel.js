@@ -99,11 +99,11 @@ const RegistrationForm = () => {
         <div
           style={{
             position: "absolute",
-            bottom: "10px", // Position from the bottom of the container
+            bottom: "0px", // Position from the bottom of the container
             right: "10px", // Position from the right of the container
             fontSize: "12px", // Adjust font size
             color: "#fff", // Text color (white)
-            fontFamily: "Arial, sans-serif", // Optional: change the font
+            fontFamily: "Arial, sans-serif", 
           }}
         >
           Designed by Freepik

@@ -165,7 +165,7 @@ const Page = () => {
                         <div className="absolute -mt-20 w-full flex justify-center">
                           <div className="h-32 w-32">
                             <img
-                              src="https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif"
+                              src="https://res.cloudinary.com/dqzzfskhw/image/upload/v1745227454/d667e72a-1e67-4b0b-b97a-1ef5149b2235_-_Copy_nliezz.jpg"
                               alt="Display Picture of Andres Berlin"
                               role="img"
                               className="rounded-full object-cover h-full w-full shadow-md"
@@ -174,23 +174,23 @@ const Page = () => {
                         </div>
                         <div className="px-6 mt-16">
                           <h1 className="font-bold text-3xl text-center mb-1">
-                            Andres Berlin
+                            Ella
                           </h1>
                           <p className="text-gray-800 text-sm text-center">
-                            {translatedContent.ceoDescription || "Chief Executive Officer"}
+                            {/* {translatedContent.ceoDescription || "Chief Executive Officer"} */}
                           </p>
                           <p className="text-center text-gray-600 text-base pt-3 font-normal">
-                            {translatedContent.ceoDescription || "The CEO's role in raising a company's corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration."}
+                            {/* {translatedContent.ceoDescription || "The CEO's role in raising a company's corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration."} */}
                           </p>
                           <div className="pt-4">
-                            <p className="text-gray-800 text-sm">
-                              <span className="font-bold">{translatedContent.email || "Email:"}</span> andres.berlin@example.com
+                            <p className="text-gray-800 text-3xl">
+                              <span className="font-bold">{translatedContent.email || "Email:"}</span> info@kargihome.com
                             </p>
-                            <p className="text-gray-800 text-sm">
-                              <span className="font-bold">{translatedContent.number || "Number:"}</span> +1 234 567 8901
+                            <p className="text-gray-800 text-3xl">
+                              <span className="font-bold">{translatedContent.number || "Number:"}</span>  +995 597137561
                             </p>
-                            <p className="text-gray-800 text-sm">
-                              <span className="font-bold">{translatedContent.language || "Language:"}</span> English, Spanish
+                            <p className="text-gray-800 text-3xl">
+                              <span className="font-bold">{translatedContent.language || "Language:"}</span> English, Georgian, Russian
                             </p>
                           </div>
                         </div>

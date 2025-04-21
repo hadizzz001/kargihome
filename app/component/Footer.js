@@ -17,7 +17,7 @@ const Footer = () => {
     const translateContent = async () => {
       const contentToTranslate = {
         sendMessage: "Send Us A Message",
-        address: "39 Bury New Road, Prestwich, Manchester, M25 9JY", 
+       
         email: "Email Us", 
       };
 
