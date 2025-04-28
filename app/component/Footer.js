@@ -17,8 +17,9 @@ const Footer = () => {
     const translateContent = async () => {
       const contentToTranslate = {
         sendMessage: "Send Us A Message",
-       
-        email: "Email Us", 
+
+        dataa: "Data Protection and Privacy Policy",
+        email: "Email Us",
       };
 
       try {
@@ -52,7 +53,7 @@ const Footer = () => {
           <div id="footer-contactus" className="block col-sm-4">
             <h3>{translatedContent.sendMessage || "Send Us A Message"}</h3>
             <ul className="footer-contacts">
-         
+
               <li>
                 <i className="fa-solid fa-phone" />{" "}
                 <a
@@ -81,7 +82,11 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
-            © {new Date().getFullYear()} kargihome
+              © {new Date().getFullYear()} kargihome
+<br/>
+              <a href="policy">
+                {translatedContent.dataa }
+              </a>
 
               <ul className="social-networks">
                 {/* <li>
@@ -94,7 +99,7 @@ const Footer = () => {
                     <FontAwesomeIcon icon={faFacebookF} />
                   </a>
                 </li> */}
-                 
+
               </ul>
             </div>
           </div>
