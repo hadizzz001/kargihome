@@ -11,8 +11,9 @@ const Page = () => {
   useEffect(() => {
     const translateContent = async () => {
       const contentToTranslate = {
-        aboutKargiHome: "Data Protection and Privacy Policy for KargiHome",
+        aboutKargiHome: "Data Protection and Privacy Policy",
         kargiHomeDescription: "At KargiHome, protecting your personal information is a top priority. As a real estate agency based in Tbilisi, Georgia, we are committed to handling your data with the utmost care and responsibility. Whether you are using our services as a renter, buyer, seller, or roommate, we collect only the information necessary to provide effective guidance and support.", 
+        kargiHomeDescription1: "Our data protection and privacy policies are in accordance with the Georgian legislation, guidance and standard practice.", 
       };
 
       try {
@@ -109,6 +110,14 @@ const Page = () => {
                 className="animate-from-left animation-from-left"
               >
                 {translatedContent.kargiHomeDescription  }
+               
+              </p>
+              <p
+                data-animation-direction="from-left"
+                data-animation-delay={50}
+                className="animate-from-left animation-from-left"
+              >
+                {translatedContent.kargiHomeDescription1  }
                
               </p>
             </div>
